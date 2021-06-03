@@ -1,4 +1,4 @@
-name: chinnkarahoi-sync
+name: lxk-sync
 on:
   schedule:
     - cron: '4 */3 * * *'
@@ -18,11 +18,11 @@ jobs:
         with:
           persist-credentials: false
 
-      - name: sync ElsaKing-DogDog
+      - name: sync lxk
         uses: cyz0105/github-sync@v2
         if: env.PAT
         with:
-          source_repo: "https://github.com/chinnkarahoi/jd_scripts"
+          source_repo: "https://gitee.com/jk9527/jd_scripts.git"
           source_branch: "master"
-          destination_branch: "chinnkarahoi"
+          destination_branch: "lxk"
           github_token: ${{ secrets.PAT }}

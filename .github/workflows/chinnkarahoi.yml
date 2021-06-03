@@ -1,4 +1,4 @@
-name: lxk0301-sync
+name: chinnkarahoi-sync
 on:
   schedule:
     - cron: '4 */3 * * *'
@@ -22,7 +22,7 @@ jobs:
         uses: cyz0105/github-sync@v2
         if: env.PAT
         with:
-          source_repo: "https://github.com/ElsaKing/DogDog.git"
-          source_branch: "main"
-          destination_branch: "lxk0301"
+          source_repo: "https://github.com/chinnkarahoi/jd_scripts"
+          source_branch: "master"
+          destination_branch: "chinnkarahoi"
           github_token: ${{ secrets.PAT }}
